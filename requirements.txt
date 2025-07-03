@@ -1,6 +1,6 @@
 pandas
 numpy
-json
-boto3
+json==2.0.9
+boto3==1.39.2
 streamlit
 requests
