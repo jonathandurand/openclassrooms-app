@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import simplejson as json
+import json
 import boto3
 import streamlit as st
 import requests
