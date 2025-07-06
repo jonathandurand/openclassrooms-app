@@ -54,6 +54,10 @@ def main():
                                  min_value=2., max_value=250., value=25., step=1.)
 	amt_annuity = amt_annuity_input*1000.
 
+	amt_credit_input = st.number_input('Montant annuel (en centaine de millier)',
+                                 min_value=0.5, max_value=40., value=5., step=1.)
+	amt_credit = amt_annuity_input*10000.
+
 	birth_years = st.number_input('Age',
                                  min_value=20., max_value=70., value=45., step=1.)
 
@@ -61,18 +65,14 @@ def main():
                                  min_value=0., max_value=50., value=5., step=1.)
 	days_employed = days_employed_input*(-365.)
 
-	days_last_phone_change_input = st.number_input('Dernier changement de téléphone (années)',
-                                 min_value=0., max_value=10., value=2., step=0.1)
-	days_last_phone_change = days_last_phone_change_input*(-365.)
-	 
 	predict_btn = st.button('Prédire')
 	if predict_btn:
-		arr_predict = [ext_source_3,
-						ext_source_2,
-						amt_annuity,
-						birth_years,
+		arr_predict = [ext_source_2,
+						ext_source_3,
 						days_employed,
-						days_last_phone_change]
+						birth_years,
+						amt_credit,
+						amt_annuity]
 		query_input = pd.DataFrame(arr_predict).transpose().to_dict(orient='split')
 		data = {"dataframe_split": query_input}
 		byte_data = json.dumps(data).encode('utf-8')
