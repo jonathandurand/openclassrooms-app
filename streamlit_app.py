@@ -44,30 +44,30 @@ def main():
 		st.write(
             'Application status is {}'.format(check_status(app_name)))
 
-	ext_source_3 = st.number_input('Source extérieur (3)',
-                                 min_value=0., max_value=0.9, value=0.5, step=0.1)
-
-	ext_source_2 = st.number_input('Source extérieur (2)',
-                                 min_value=0., max_value=0.9, value=0.5, step=0.1)
-
-	amt_annuity_input = st.number_input('Montant annuel (en millier)',
-                                 min_value=2., max_value=250., value=25., step=1.)
-	amt_annuity = amt_annuity_input*1000.
-
-	amt_credit_input = st.number_input('Crédit total (en centaine de millier)',
-                                 min_value=0.5, max_value=40., value=5., step=1.)
-	amt_credit = amt_annuity_input*10000.
-
-	birth_years = st.number_input('Age',
+	birth_years = st.number_input('Age - [20, 70]',
                                  min_value=20., max_value=70., value=45., step=1.)
 
-	days_employed_input = st.number_input('Années en emploi',
+	days_employed_input = st.number_input('Années en emploi, [0, 50]',
                                  min_value=0., max_value=50., value=5., step=1.)
 	days_employed = days_employed_input*(-365.)
 
-	days_last_phone_change_input = st.number_input('Dernier changement de téléphone (années)',
+	days_last_phone_change_input = st.number_input('Dernier changement de téléphone (années) - [0, 10]',
                                  min_value=0., max_value=10., value=5., step=2.)
 	days_last_phone_change = days_last_phone_change_input*(-365.)
+
+	amt_credit_input = st.number_input('Crédit total (en centaine de millier) - [0.5, 40]',
+                                 min_value=0.5, max_value=40., value=5., step=1.)
+	amt_credit = amt_annuity_input*10000.
+
+	amt_annuity_input = st.number_input('Montant annuel (en millier) - [2, 250]',
+                                 min_value=2., max_value=250., value=25., step=1.)
+	amt_annuity = amt_annuity_input*1000.
+
+	ext_source_2 = st.number_input('Source extérieur (2)' - [0, 0.9],
+                                 min_value=0., max_value=0.9, value=0.5, step=0.1)
+
+	ext_source_3 = st.number_input('Source extérieur (3) - [0, 0.9]',
+                                 min_value=0., max_value=0.9, value=0.5, step=0.1)
 
 	predict_btn = st.button('Prédire')
 	if predict_btn:
