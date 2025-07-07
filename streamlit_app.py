@@ -63,7 +63,7 @@ def main():
                                  min_value=2., max_value=250., value=25., step=1.)
 	amt_annuity = amt_annuity_input*1000.
 
-	ext_source_2 = st.number_input('Source extérieur (2)' - [0, 0.9],
+	ext_source_2 = st.number_input('Source extérieur (2) - [0, 0.9]',
                                  min_value=0., max_value=0.9, value=0.5, step=0.1)
 
 	ext_source_3 = st.number_input('Source extérieur (3) - [0, 0.9]',
