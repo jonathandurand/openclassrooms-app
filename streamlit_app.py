@@ -57,7 +57,7 @@ def main():
 
 	amt_credit_input = st.number_input('Crédit total (en centaine de millier) - [0.5, 40]',
                                  min_value=0.5, max_value=40., value=5., step=1.)
-	amt_credit = amt_credit_input*10000.
+	amt_credit = amt_credit_input*100000.
 
 	amt_annuity_input = st.number_input('Montant annuel (en millier) - [2, 250]',
                                  min_value=2., max_value=250., value=25., step=1.)
