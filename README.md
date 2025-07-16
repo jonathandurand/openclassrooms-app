@@ -1,19 +1,22 @@
-# 🎈 Blank app template
+# Application d'utilisation de l'API
 
-A simple Streamlit app template for you to modify!
+## Utilisation
+* En ligne à l'adresse https://openclassrooms-app.streamlit.app/
+* Le code de l'application nécessite une autorisation AWS mais l'utilisation est libre en ligne
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Variables d'entrée
+* Âge
+* Temps d’emploi
+* Temps depuis le dernier changement de téléphone
+* Montant total du crédit
+* Montant annuel
+* Source extérieur 2
+* Source extérieure 3
 
-### How to run it on your own machine
+## Utilisation
+* Bouton status : vérification de l'accès à l'API sur AWS
+* Remplissage des données client : proposition des valeurs médianes
+* Bouton prédire : renvoi la prédiction de l'API
 
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## Packages
+Les packages utilisés sont listés dans le fichier "requirements.txt"
